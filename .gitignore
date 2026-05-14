@@ -40,3 +40,6 @@ scripts/
 # Keep only the processed JSON data
 !data/*.json
 !data/*.geojson
+
+# claude
+CLAUDE.md

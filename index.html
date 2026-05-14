@@ -24,14 +24,20 @@
 
   <header>
     <nav class="nav-container">
-      <a href="#hero" class="nav-link">Overview</a>
-      <a href="#timeline" class="nav-link">History</a>
-      <a href="#statistics" class="nav-link">Statistics</a>
-      <a href="#ranking" class="nav-link">Ranking</a>
-      <a href="#geography" class="nav-link">Geography</a>
-      <a href="#belgium" class="nav-link">Belgium</a>
-      <a href="#etymology" class="nav-link">Etymology</a>
-      <a href="#sources" class="nav-link">Sources</a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#hero" class="nav-link">Overview</a>
+        <a href="#statistics" class="nav-link">Statistics</a>
+        <a href="#ranking" class="nav-link">Ranking</a>
+        <a href="#geography" class="nav-link">Geography</a>
+        <a href="#belgium" class="nav-link">Belgium</a>
+        <a href="#timeline" class="nav-link">History</a>
+        <a href="#sources" class="nav-link">Sources</a>
+      </div>
     </nav>
   </header>
 
@@ -52,8 +58,8 @@
             <div class="stat-label">Boys named Lubin in France since 1900</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">2,530</div>
-            <div class="stat-label">Boys named Lubin in France since 2010</div>
+            <div class="stat-number">3,919</div>
+            <div class="stat-label">Boys named Lubin in France since 2000</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">1,400+</div>
@@ -65,18 +71,6 @@
           Saint Lubin, a 6th-century Bishop of Chartres. The name peaked in popularity
           in 2012 with 245 births and remains in active use today.
         </p>
-      </div>
-    </section>
-
-    <!-- Historical Timeline -->
-    <section id="timeline">
-      <h2>Historical Usage Timeline</h2>
-      <p class="section-intro content-narrow">
-        Lubin has been used as a masculine first name in France for over fourteen centuries,
-        from medieval saints to contemporary families.
-      </p>
-      <div class="timeline" id="timeline-container">
-        <!-- Timeline items will be inserted here by JavaScript -->
       </div>
     </section>
 
@@ -95,8 +89,6 @@
         <ul>
           <li><strong>Total births (1900-2024):</strong> 4,160 boys</li>
           <li><strong>Peak year:</strong> 2012 with 245 births</li>
-          <li><strong>Recent usage (2010-2024):</strong> 2,530 boys (60.8% of all recorded usage)</li>
-          <li><strong>2024 ranking:</strong> 623rd most popular boys' name in France</li>
           <li><strong>Gender:</strong> Exclusively masculine (0 girls)</li>
         </ul>
       </div>
@@ -116,7 +108,7 @@
 
       <div class="ranking-summary content-narrow">
         <div class="ranking-highlight">
-          <h3>Peak Popularity (2010-2015)</h3>
+          <h3>Peak Popularity</h3>
           <ul>
             <li><strong>2012:</strong> Ranked <strong>282nd</strong> out of 6,823 boys' names (top 4.1%)</li>
             <li><strong>2011:</strong> Ranked 284th out of 6,601 names (top 4.3%)</li>
@@ -206,39 +198,15 @@
       </p>
     </section>
 
-    <!-- Etymology & Cultural Context -->
-    <section id="etymology">
-      <h2>Etymology &amp; Cultural Context</h2>
-      <div class="content-narrow">
-        <h3>Origin</h3>
-        <p>
-          Lubin derives from the ancient Germanic name <em>Leobin</em>, formed from
-          <em>leub</em> or <em>liub</em> meaning "dear" or "beloved." The name entered
-          French usage through Saint Lubin (Leobinus), Bishop of Chartres in the 6th century
-          (c. 520-556 AD), who is venerated in the Catholic tradition.
-        </p>
-
-        <h3>Cultural Significance</h3>
-        <p>
-          The name appears prominently in French cultural works:
-        </p>
-        <ul>
-          <li><strong>"Annette et Lubin" (1761)</strong> — Jean-François Marmontel's pastoral tale featuring Lubin as a protagonist, adapted into multiple operas and theatrical productions throughout Europe<sup><a href="#ref8" class="cite-link">[8]</a></sup></li>
-          <li><strong>"Au clair de la lune"</strong> — Traditional French folk song featuring a character named Lubin, taught in schools and sung for centuries</li>
-        </ul>
-
-        <h3>Historical Bearers</h3>
-        <ul>
-          <li><strong>Saint Lubin (c. 520-556)</strong> — Bishop of Chartres, venerated saint<sup><a href="#ref3" class="cite-link">[3]</a></sup></li>
-          <li><strong>Lubin Baugin (c. 1612-1663)</strong> — French Baroque painter, works displayed at the Musée du Louvre including "Nature morte à l'échiquier" (Still Life with Chessboard), Painter to the King in 1657<sup><a href="#ref4" class="cite-link">[4]</a><a href="#ref5" class="cite-link">[5]</a></sup></li>
-          <li><strong>Lubin de Beauvais (1873-1917)</strong> — French painter, watercolourist, and illustrator, works held in the Musée d'Orsay collection<sup><a href="#ref6" class="cite-link">[6]</a><a href="#ref7" class="cite-link">[7]</a></sup></li>
-        </ul>
-
-        <h3>Linguistic Classification</h3>
-        <p>
-          Lubin is classified as a traditional French masculine first name of Germanic origin,
-          with continuous documented usage spanning from the Early Middle Ages to the present day.
-        </p>
+    <!-- Historical Timeline -->
+    <section id="timeline">
+      <h2>Historical Usage Timeline</h2>
+      <p class="section-intro content-narrow">
+        Lubin has been used as a masculine first name in France for over fourteen centuries,
+        from medieval saints to contemporary families.
+      </p>
+      <div class="timeline" id="timeline-container">
+        <!-- Timeline items will be inserted here by JavaScript -->
       </div>
     </section>
 
@@ -320,13 +288,33 @@
           <li id="ref8" class="reference-item">
             <strong>Bibliothèque nationale de France.</strong>
             <em>Marmontel, Jean-François. "Annette et Lubin" (1761).</em>
-            French National Library catalog.
+            French National Library catalog. Author record:
+            Available at: <a href="https://data.bnf.fr/fr/11916447/jean-francois_marmontel/" target="_blank" rel="noopener">https://data.bnf.fr/fr/11916447/jean-francois_marmontel/</a>
+            (Accessed May 2026)
           </li>
 
           <li id="ref9" class="reference-item">
-            <strong>French Folk Tradition.</strong>
+            <strong>Bibliothèque nationale de France — Gallica.</strong>
             <em>"Au clair de la lune" — Traditional French folk song.</em>
-            18th-century French folk song featuring a character named Lubin, widely taught in French schools and part of French cultural heritage.
+            18th-century French folk song featuring a character named Lubin, widely taught in French schools and part of French cultural heritage. Early printed editions held in the BnF digital library.
+            Available at: <a href="https://gallica.bnf.fr/ark:/12148/btv1b10500001v" target="_blank" rel="noopener">https://gallica.bnf.fr/ark:/12148/btv1b10500001v</a>
+            (Accessed May 2026)
+          </li>
+
+          <li id="ref10" class="reference-item">
+            <strong>Molière (Jean-Baptiste Poquelin).</strong>
+            <em>George Dandin, ou le Mari confondu (1668).</em>
+            Comedy premiered at Versailles, 18 July 1668. Features a character named Lubin, a naive peasant servant who plays a central role in the plot.
+            Available at: <a href="https://en.wikipedia.org/wiki/George_Dandin_ou_le_Mari_confondu" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/George_Dandin_ou_le_Mari_confondu</a>
+            (Accessed May 2026)
+          </li>
+
+          <li id="ref11" class="reference-item">
+            <strong>Marot, Clément (c. 1496–1544).</strong>
+            <em>"Frère Lubin" — Satirical poem, c. 1520.</em>
+            Famous French Renaissance poem establishing Lubin as a recognizable stock character in French literary culture — a roguish, hypocritical monk. The name Lubin became associated with this archetype in French theater and literature.
+            Available at: <a href="https://fr.wikisource.org/wiki/Fr%C3%A8re_Lubin" target="_blank" rel="noopener">https://fr.wikisource.org/wiki/Frère_Lubin</a>
+            (Accessed May 2026)
           </li>
         </ol>
       </div>

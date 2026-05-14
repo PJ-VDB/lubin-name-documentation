@@ -14,6 +14,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.error('Error loading visualizations:', error);
   }
 
+  // Mobile nav toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+      navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    });
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open navigation');
+      });
+    });
+  }
+
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
