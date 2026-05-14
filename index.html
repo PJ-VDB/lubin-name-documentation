@@ -18,9 +18,10 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.lang = localStorage.getItem('lang') || 'da';</script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
+  <a href="#main" class="skip-link" data-i18n="nav.skip">Skip to main content</a>
 
   <header>
     <nav class="nav-container">
@@ -30,13 +31,18 @@
         <span></span>
       </button>
       <div class="nav-links">
-        <a href="#hero" class="nav-link">Overview</a>
-        <a href="#statistics" class="nav-link">Statistics</a>
-        <a href="#ranking" class="nav-link">Ranking</a>
-        <a href="#geography" class="nav-link">Geography</a>
-        <a href="#belgium" class="nav-link">Belgium</a>
-        <a href="#timeline" class="nav-link">History</a>
-        <a href="#sources" class="nav-link">Sources</a>
+        <a href="#hero" class="nav-link" data-i18n="nav.overview">Overview</a>
+        <a href="#statistics" class="nav-link" data-i18n="nav.statistics">Statistics</a>
+        <a href="#ranking" class="nav-link" data-i18n="nav.ranking">Ranking</a>
+        <a href="#geography" class="nav-link" data-i18n="nav.geography">Geography</a>
+        <a href="#belgium" class="nav-link" data-i18n="nav.belgium">Belgium</a>
+        <a href="#timeline" class="nav-link" data-i18n="nav.history">History</a>
+        <a href="#sources" class="nav-link" data-i18n="nav.sources">Sources</a>
+      </div>
+      <div class="lang-toggle">
+        <button id="lang-en" class="lang-btn" aria-label="Switch to English">EN</button>
+        <span class="lang-divider">|</span>
+        <button id="lang-da" class="lang-btn active" aria-label="Skift til dansk">DA</button>
       </div>
     </nav>
   </header>
@@ -45,9 +51,9 @@
     <!-- Hero Section -->
     <section id="hero">
       <h1>Lubin</h1>
-      <p class="subtitle">A Traditional French Masculine First Name</p>
+      <p class="subtitle" data-i18n="hero.subtitle">A Traditional French Masculine First Name</p>
       <div class="intro content-narrow">
-        <p>
+        <p data-i18n-html="hero.intro">
           This document presents official statistical evidence and historical documentation
           for the French masculine first name <strong>Lubin</strong>. All data is sourced
           from government authorities in France (INSEE) and Belgium (Statbel).
@@ -55,18 +61,22 @@
         <div class="key-stats">
           <div class="stat-card">
             <div class="stat-number">4,160</div>
-            <div class="stat-label">Boys named Lubin in France since 1900</div>
+            <div class="stat-label" data-i18n="hero.stat1.label">Boys named Lubin in France since 1900</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">3,919</div>
-            <div class="stat-label">Boys named Lubin in France since 2000</div>
+            <div class="stat-label" data-i18n="hero.stat2.label">Boys named Lubin in France since 2000</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">1,400+</div>
-            <div class="stat-label">Years of documented usage</div>
+            <div class="stat-label" data-i18n="hero.stat3.label">Years of documented usage</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">245</div>
+            <div class="stat-label" data-i18n="hero.stat4.label">Peak births in a single year (2012)</div>
           </div>
         </div>
-        <p>
+        <p data-i18n="hero.body">
           Lubin has been in continuous use for over 1,400 years, originating from
           Saint Lubin, a 6th-century Bishop of Chartres. The name peaked in popularity
           in 2012 with 245 births and remains in active use today.
@@ -76,23 +86,23 @@
 
     <!-- National Statistics -->
     <section id="statistics">
-      <h2>National Statistics: France</h2>
-      <p class="section-intro content-narrow">
+      <h2 data-i18n="stats.heading">National Statistics: France</h2>
+      <p class="section-intro content-narrow" data-i18n="stats.intro">
         Data from INSEE (Institut national de la statistique et des études économiques),
         the official French national statistics institute, showing all registered births
         from 1900 to 2024.
       </p>
-      <div class="chart-container" role="img" aria-label="Line chart showing 4,160 boys named Lubin in France from 1900-2024">
+      <div class="chart-container" role="img" aria-label="Line chart showing 4,160 boys named Lubin in France from 1900-2024" data-i18n-aria="stats.aria">
         <canvas id="national-chart"></canvas>
       </div>
       <div class="chart-summary content-narrow">
         <ul>
-          <li><strong>Total births (1900-2024):</strong> 4,160 boys</li>
-          <li><strong>Peak year:</strong> 2012 with 245 births</li>
-          <li><strong>Gender:</strong> Exclusively masculine (0 girls)</li>
+          <li data-i18n-html="stats.total"><strong>Total births (1900-2024):</strong> 4,160 boys</li>
+          <li data-i18n-html="stats.peak"><strong>Peak year:</strong> 2012 with 245 births</li>
+          <li data-i18n-html="stats.gender"><strong>Gender:</strong> Exclusively masculine (0 girls)</li>
         </ul>
       </div>
-      <p class="source-citation">
+      <p class="source-citation" data-i18n-html="stats.source">
         <strong>Source:</strong> INSEE Fichier des prénoms — Édition 2024.
         <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a>
       </p>
@@ -100,46 +110,46 @@
 
     <!-- Popularity Ranking -->
     <section id="ranking">
-      <h2>Popularity Ranking Among French Boys' Names</h2>
-      <p class="section-intro content-narrow">
+      <h2 data-i18n="ranking.heading">Popularity Ranking Among French Boys' Names</h2>
+      <p class="section-intro content-narrow" data-i18n="ranking.intro">
         Lubin's ranking relative to all other boys' names in France demonstrates
         its consistent usage as a commonly-chosen first name.
       </p>
 
       <div class="ranking-summary content-narrow">
         <div class="ranking-highlight">
-          <h3>Peak Popularity</h3>
+          <h3 data-i18n="ranking.peak.heading">Peak Popularity</h3>
           <ul>
-            <li><strong>2012:</strong> Ranked <strong>282nd</strong> out of 6,823 boys' names (top 4.1%)</li>
-            <li><strong>2011:</strong> Ranked 284th out of 6,601 names (top 4.3%)</li>
-            <li><strong>2010:</strong> Ranked 303rd out of 6,377 names (top 4.8%)</li>
+            <li data-i18n-html="ranking.peak.2012"><strong>2012:</strong> Ranked <strong>282nd</strong> out of 6,823 boys' names (top 4.1%)</li>
+            <li data-i18n-html="ranking.peak.2011"><strong>2011:</strong> Ranked 284th out of 6,601 names (top 4.3%)</li>
+            <li data-i18n-html="ranking.peak.2010"><strong>2010:</strong> Ranked 303rd out of 6,377 names (top 4.8%)</li>
           </ul>
         </div>
 
         <div class="ranking-highlight">
-          <h3>Recent Years</h3>
+          <h3 data-i18n="ranking.recent.heading">Recent Years</h3>
           <ul>
-            <li><strong>2024:</strong> Ranked 620th out of 6,859 names (top 9.0%)</li>
-            <li><strong>2023:</strong> Ranked 523rd out of 7,047 names (top 7.4%)</li>
-            <li><strong>2022:</strong> Ranked 405th out of 7,264 names (top 5.6%)</li>
+            <li data-i18n-html="ranking.recent.2024"><strong>2024:</strong> Ranked 620th out of 6,859 names (top 9.0%)</li>
+            <li data-i18n-html="ranking.recent.2023"><strong>2023:</strong> Ranked 523rd out of 7,047 names (top 7.4%)</li>
+            <li data-i18n-html="ranking.recent.2022"><strong>2022:</strong> Ranked 405th out of 7,264 names (top 5.6%)</li>
           </ul>
         </div>
 
         <div class="ranking-context">
-          <p>
+          <p data-i18n-html="ranking.context.p1">
             <strong>Context:</strong> From 2001 to 2022, Lubin consistently ranked in the
             <strong>top 300-500</strong> among all boys' names in France. During its peak years
             (2010-2015), it placed in the <strong>top 300-350</strong> out of over 6,000-7,000
             unique names given each year.
           </p>
-          <p>
+          <p data-i18n="ranking.context.p2">
             This ranking places Lubin firmly among commonly-used French boys' names, comparable
             to other established traditional names in everyday use across France.
           </p>
         </div>
       </div>
 
-      <p class="source-citation">
+      <p class="source-citation" data-i18n-html="ranking.source">
         <strong>Source:</strong> INSEE Fichier des prénoms — Édition 2024 (Parquet format with complete name rankings).
         <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a>
       </p>
@@ -147,38 +157,39 @@
 
     <!-- Geographic Distribution -->
     <section id="geography">
-      <h2>Geographic Distribution in France</h2>
-      <p class="section-intro content-narrow">
+      <h2 data-i18n="geo.heading">Geographic Distribution in France</h2>
+      <p class="section-intro content-narrow" data-i18n="geo.intro">
         The map below shows the cumulative total of boys named Lubin in each French département
         from 1900 to 2024. The name is used throughout France, with notable concentrations in
         Brittany, Normandy, and the Nord region.
       </p>
       <div id="map-container"></div>
       <div class="geography-summary content-narrow">
-        <p style="margin-bottom: 1.5rem; padding: 1rem; background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 4px;">
+        <p style="margin-bottom: 1.5rem; padding: 1rem; background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 4px;" data-i18n-html="geo.note">
           <strong>Note:</strong> The map above shows metropolitan France only (3,821 births).
           The remaining 339 births (8.1% of the national total of 4,160) were registered in
           French overseas territories (Guadeloupe, Martinique, Réunion, etc.), by French
           consulates abroad, or with unspecified département codes in the INSEE data.
         </p>
-        <h3>Top Départements by Total Births (1900-2024)</h3>
+        <h3 data-i18n="geo.top.heading">Top Départements by Total Births (1900-2024)</h3>
         <ol class="top-departements">
-          <li><strong>Seine-Maritime (76):</strong> 125 births — Normandy, includes Rouen and Le Havre</li>
-          <li><strong>Nord (59):</strong> 118 births — Northern France, includes Lille</li>
-          <li><strong>Ille-et-Vilaine (35):</strong> 102 births — Brittany, includes Rennes</li>
-          <li><strong>Finistère (29):</strong> 95 births — Brittany, includes Brest</li>
-          <li><strong>Morbihan (56):</strong> 88 births — Brittany, includes Vannes</li>
+          <li data-i18n-html="geo.dept1"><strong>Seine-Maritime (76):</strong> 125 births — Normandy, includes Rouen and Le Havre</li>
+          <li data-i18n-html="geo.dept2"><strong>Nord (59):</strong> 118 births — Northern France, includes Lille</li>
+          <li data-i18n-html="geo.dept3"><strong>Ille-et-Vilaine (35):</strong> 102 births — Brittany, includes Rennes</li>
+          <li data-i18n-html="geo.dept4"><strong>Finistère (29):</strong> 95 births — Brittany, includes Brest</li>
+          <li data-i18n-html="geo.dept5"><strong>Morbihan (56):</strong> 88 births — Brittany, includes Vannes</li>
         </ol>
       </div>
-      <p class="source-citation">
+      <p class="source-citation" data-i18n-html="geo.source">
         <strong>Source:</strong> INSEE Fichier des prénoms (departmental data), 2024.
+        <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">https://www.insee.fr/fr/statistiques/8595130</a>
       </p>
     </section>
 
     <!-- Belgium Data -->
     <section id="belgium">
-      <h2>Usage in Belgium</h2>
-      <p class="section-intro content-narrow">
+      <h2 data-i18n="belgium.heading">Usage in Belgium</h2>
+      <p class="section-intro content-narrow" data-i18n="belgium.intro">
         Lubin is also used as a masculine first name in Belgium, as documented by
         Statbel, the Belgian Federal Statistics authority.
       </p>
@@ -186,13 +197,13 @@
         <canvas id="belgium-chart"></canvas>
       </div>
       <div class="belgium-summary content-narrow">
-        <p>
+        <p data-i18n="belgium.summary">
           Statbel reports "5+" for privacy protection when a name is given to 5 or more
           children in a given year. Lubin appears in official records for multiple years,
           confirming cross-border usage in French-speaking regions.
         </p>
       </div>
-      <p class="source-citation">
+      <p class="source-citation" data-i18n-html="belgium.source">
         <strong>Source:</strong> Statbel — Belgian Federal Statistics.
         <a href="https://statbel.fgov.be/en/themes/population/family-names-and-first-names/first-names-boys-and-girls" target="_blank" rel="noopener">statbel.fgov.be</a>
       </p>
@@ -200,8 +211,8 @@
 
     <!-- Historical Timeline -->
     <section id="timeline">
-      <h2>Historical Usage Timeline in France</h2>
-      <p class="section-intro content-narrow">
+      <h2 data-i18n="timeline.heading">Historical Usage Timeline in France</h2>
+      <p class="section-intro content-narrow" data-i18n-html="timeline.intro">
         This timeline documents two categories of evidence for the name Lubin across fourteen
         centuries. First, notable historical figures who bore the name: a 6th-century Bishop of
         Chartres, a 17th-century painter whose works hang in the Louvre, and a 19th-century
@@ -219,8 +230,8 @@
 
     <!-- References -->
     <section id="sources">
-      <h2>References</h2>
-      <p class="section-intro content-narrow">
+      <h2 data-i18n="sources.heading">References</h2>
+      <p class="section-intro content-narrow" data-i18n-html="sources.intro">
         Statistical data is sourced exclusively from official government authorities.
         Historical and cultural references include government institutions, national museums,
         encyclopedias, and digital archives. <span class="official-badge">OFFICIAL</span> indicates
@@ -229,7 +240,7 @@
 
       <div class="references-list content-narrow">
         <ol>
-          <li id="ref1" class="reference-item official-ref">
+          <li id="ref1" class="reference-item official-ref" data-i18n-html="ref1">
             <span class="official-badge">OFFICIAL</span>
             <strong>INSEE (Institut national de la statistique et des études économiques).</strong>
             <span class="source-explanation">INSEE is the French government's official national statistics agency, responsible for collecting and publishing demographic, economic, and social data for France. It operates under the Ministry of Economy and Finance.</span>
@@ -239,7 +250,7 @@
             (Accessed May 2026)
           </li>
 
-          <li id="ref2" class="reference-item official-ref">
+          <li id="ref2" class="reference-item official-ref" data-i18n-html="ref2">
             <span class="official-badge">OFFICIAL</span>
             <strong>Statbel (Belgian Federal Statistics Authority).</strong>
             <span class="source-explanation">Statbel is the Belgian government's official federal statistics office, responsible for collecting and publishing demographic data for Belgium. It operates under the Belgian Federal Public Service Economy.</span>
@@ -249,7 +260,7 @@
             (Accessed May 2026)
           </li>
 
-          <li id="ref3" class="reference-item">
+          <li id="ref3" class="reference-item" data-i18n-html="ref3">
             <strong>Nominis — French Catholic Church.</strong>
             <em>Saint Lubin (Leobinus), Bishop of Chartres.</em>
             Official Catholic hagiographic database.
@@ -257,7 +268,7 @@
             (Accessed May 2026)
           </li>
 
-          <li id="ref4" class="reference-item official-ref">
+          <li id="ref4" class="reference-item official-ref" data-i18n-html="ref4">
             <span class="official-badge">OFFICIAL</span>
             <strong>Musée du Louvre.</strong>
             <span class="source-explanation">The Louvre is a French government-owned national museum in Paris, the world's most-visited museum, housing France's national art collections including works from the Middle Ages to 1848.</span>
@@ -267,7 +278,7 @@
             (Accessed May 2026)
           </li>
 
-          <li id="ref5" class="reference-item">
+          <li id="ref5" class="reference-item" data-i18n-html="ref5">
             <strong>Encyclopædia Universalis.</strong>
             <em>Lubin Baugin.</em>
             French academic encyclopedia.
@@ -275,7 +286,7 @@
             (Accessed May 2026)
           </li>
 
-          <li id="ref6" class="reference-item official-ref">
+          <li id="ref6" class="reference-item official-ref" data-i18n-html="ref6">
             <span class="official-badge">OFFICIAL</span>
             <strong>Musée d'Orsay.</strong>
             <span class="source-explanation">The Musée d'Orsay is a French government-owned national museum in Paris, housing France's national collection of art from 1848 to 1914, including major Impressionist and Post-Impressionist works.</span>
@@ -285,7 +296,7 @@
             (Accessed May 2026)
           </li>
 
-          <li id="ref7" class="reference-item official-ref">
+          <li id="ref7" class="reference-item official-ref" data-i18n-html="ref7">
             <span class="official-badge">OFFICIAL</span>
             <strong>Bibliothèque nationale de France — Catalogue général.</strong>
             <em>Lubin de Beauvais — Notice d'autorité.</em>
@@ -294,7 +305,7 @@
             (Accessed May 2026)
           </li>
 
-          <li id="ref8" class="reference-item">
+          <li id="ref8" class="reference-item" data-i18n-html="ref8">
             <strong>Wikipédia.</strong>
             <em>Marmontel, Jean-François. "Annette et Lubin" (1761).</em>
             French Wikipedia article documenting Marmontel's pastoral tale featuring Lubin as the male protagonist, adapted into multiple operas and theatrical productions throughout Europe.
@@ -302,7 +313,7 @@
             (Accessed May 2026)
           </li>
 
-          <li id="ref9" class="reference-item">
+          <li id="ref9" class="reference-item" data-i18n-html="ref9">
             <strong>Wikipédia.</strong>
             <em>"Au clair de la lune" — Chanson traditionnelle française.</em>
             French Wikipedia article documenting the traditional folk song, including the full lyrics in which Lubin appears by name as a character: <em>"Au clair de la lune, L'aimable Lubin / Frappe chez la brune"</em>.
@@ -310,7 +321,7 @@
             (Accessed May 2026)
           </li>
 
-          <li id="ref10" class="reference-item">
+          <li id="ref10" class="reference-item" data-i18n-html="ref10">
             <strong>Molière (Jean-Baptiste Poquelin).</strong>
             <em>George Dandin, ou le Mari confondu (1668).</em>
             Comedy premiered at Versailles, 18 July 1668. Features a character named Lubin, a naive peasant servant who plays a central role in the plot.
@@ -318,7 +329,7 @@
             (Accessed May 2026)
           </li>
 
-          <li id="ref11" class="reference-item">
+          <li id="ref11" class="reference-item" data-i18n-html="ref11">
             <strong>Marot, Clément (c. 1496–1544).</strong>
             <em>"Frère Lubin" — Satirical poem, c. 1520.</em>
             Famous French Renaissance poem establishing Lubin as a recognizable stock character in French literary culture — a roguish, hypocritical monk. The name Lubin became associated with this archetype in French theater and literature.
@@ -332,11 +343,11 @@
 
   <footer>
     <div class="footer-content">
-      <p>
+      <p data-i18n="footer.purpose">
         This documentation was prepared for administrative purposes to demonstrate
         the established usage of Lubin as a traditional French masculine first name.
       </p>
-      <p class="footer-meta">
+      <p class="footer-meta" data-i18n="footer.meta">
         Last updated: May 2026 | Data sources: INSEE (France) and Statbel (Belgium)
       </p>
     </div>
@@ -345,6 +356,7 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
   <script src="js/chart-national.js"></script>
   <script src="js/chart-belgium.js"></script>

@@ -83,12 +83,15 @@ async function renderFranceMap() {
           .attr('stroke-width', 2)
           .style('opacity', 0.8);
 
+        const nameLabel = name || t('map.tooltip.unknown');
+        const codeLabel = code || t('map.tooltip.na');
+        const countKey = count === 1 ? 'map.tooltip.single' : 'map.tooltip.plural';
         tooltip
           .style('visibility', 'visible')
           .html(`
-            <strong>${name || 'Unknown'} (${code || 'N/A'})</strong><br>
-            ${count} boy${count !== 1 ? 's' : ''} named Lubin<br>
-            <span style="font-size: 12px; color: #666;">(total since 1900)</span>
+            <strong>${nameLabel} (${codeLabel})</strong><br>
+            ${count} ${t(countKey)}<br>
+            <span style="font-size: 12px; color: #666;">${t('map.tooltip.since')}</span>
           `);
       })
       .on('mousemove', function(event) {
@@ -172,7 +175,7 @@ async function renderFranceMap() {
       .style('font-family', 'Inter, sans-serif')
       .style('font-weight', 'bold')
       .style('fill', '#374151')
-      .text('Total births');
+      .text(t('map.legend.title'));
 
     console.log(`✓ France map loaded: ${geoData.features.length} départements`);
   } catch (error) {
@@ -182,8 +185,8 @@ async function renderFranceMap() {
     if (container) {
       container.innerHTML = `
         <div style="padding: 2rem; text-align: center; color: #666;">
-          <p><strong>Map temporarily unavailable</strong></p>
-          <p>Please refer to the geographic summary below for regional distribution data.</p>
+          <p><strong>${t('map.unavailable.title')}</strong></p>
+          <p>${t('map.unavailable.body')}</p>
         </div>
       `;
     }

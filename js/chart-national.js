@@ -1,4 +1,5 @@
-// National INSEE Time Series Chart
+window.chartNational = null;
+
 async function renderNationalChart() {
   try {
     const response = await fetch('data/insee-national.json');
@@ -12,17 +13,20 @@ async function renderNationalChart() {
       return;
     }
 
-    // Create gradient for area fill
     const gradient = ctx.getContext('2d').createLinearGradient(0, 0, 0, 400);
     gradient.addColorStop(0, 'rgba(0, 40, 104, 0.2)');
     gradient.addColorStop(1, 'rgba(0, 40, 104, 0.02)');
 
-    new Chart(ctx, {
+    if (window.chartNational) {
+      window.chartNational.destroy();
+    }
+
+    window.chartNational = new Chart(ctx, {
       type: 'line',
       data: {
         labels: data.years.map(d => d.year),
         datasets: [{
-          label: 'Boys named Lubin',
+          label: t('chart.national.dataset'),
           data: data.years.map(d => d.count),
           borderColor: '#002868',
           backgroundColor: gradient,
@@ -50,18 +54,14 @@ async function renderNationalChart() {
           tooltip: {
             backgroundColor: 'rgba(0, 0, 0, 0.8)',
             padding: 12,
-            titleFont: {
-              size: 14,
-              weight: 'bold'
-            },
-            bodyFont: {
-              size: 13
-            },
+            titleFont: { size: 14, weight: 'bold' },
+            bodyFont: { size: 13 },
             callbacks: {
-              title: (context) => `Year ${context[0].label}`,
+              title: (context) => `${t('chart.national.tooltip.year')} ${context[0].label}`,
               label: (context) => {
                 const count = context.parsed.y;
-                return `${count} boy${count !== 1 ? 's' : ''} named Lubin`;
+                const key = count === 1 ? 'chart.national.tooltip.single' : 'chart.national.tooltip.plural';
+                return `${count} ${t(key)}`;
               }
             }
           }
@@ -70,40 +70,21 @@ async function renderNationalChart() {
           x: {
             title: {
               display: true,
-              text: 'Year',
-              font: {
-                size: 13,
-                weight: 'bold'
-              }
+              text: t('chart.national.xaxis'),
+              font: { size: 13, weight: 'bold' }
             },
-            grid: {
-              display: false
-            },
-            ticks: {
-              maxTicksLimit: 15,
-              font: {
-                size: 11
-              }
-            }
+            grid: { display: false },
+            ticks: { maxTicksLimit: 15, font: { size: 11 } }
           },
           y: {
             beginAtZero: true,
             title: {
               display: true,
-              text: 'Number of Births',
-              font: {
-                size: 13,
-                weight: 'bold'
-              }
+              text: t('chart.national.yaxis'),
+              font: { size: 13, weight: 'bold' }
             },
-            grid: {
-              color: 'rgba(0, 0, 0, 0.05)'
-            },
-            ticks: {
-              font: {
-                size: 11
-              }
-            }
+            grid: { color: 'rgba(0, 0, 0, 0.05)' },
+            ticks: { font: { size: 11 } }
           }
         }
       }
@@ -113,4 +94,20 @@ async function renderNationalChart() {
   } catch (error) {
     console.error('Error loading national chart:', error);
   }
+}
+
+function updateNationalChart() {
+  if (!window.chartNational) return;
+  const chart = window.chartNational;
+  chart.data.datasets[0].label = t('chart.national.dataset');
+  chart.options.scales.x.title.text = t('chart.national.xaxis');
+  chart.options.scales.y.title.text = t('chart.national.yaxis');
+  chart.options.plugins.tooltip.callbacks.title =
+    (context) => `${t('chart.national.tooltip.year')} ${context[0].label}`;
+  chart.options.plugins.tooltip.callbacks.label = (context) => {
+    const count = context.parsed.y;
+    const key = count === 1 ? 'chart.national.tooltip.single' : 'chart.national.tooltip.plural';
+    return `${count} ${t(key)}`;
+  };
+  chart.update();
 }

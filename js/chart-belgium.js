@@ -1,4 +1,5 @@
-// Belgium Statistics Bar Chart
+window.chartBelgium = null;
+
 async function renderBelgiumChart() {
   try {
     const response = await fetch('data/belgium.json');
@@ -12,12 +13,16 @@ async function renderBelgiumChart() {
       return;
     }
 
-    new Chart(ctx, {
+    if (window.chartBelgium) {
+      window.chartBelgium.destroy();
+    }
+
+    window.chartBelgium = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: data.years.map(d => d.year.toString()),
         datasets: [{
-          label: 'Boys named Lubin (5+)',
+          label: t('chart.belgium.dataset'),
           data: data.years.map(d => d.count),
           backgroundColor: '#002868',
           borderColor: '#002868',
@@ -25,31 +30,20 @@ async function renderBelgiumChart() {
         }]
       },
       options: {
-        indexAxis: 'y', // Horizontal bars
+        indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: {
-            display: false
-          },
+          legend: { display: false },
           tooltip: {
             backgroundColor: 'rgba(0, 0, 0, 0.8)',
             padding: 12,
-            titleFont: {
-              size: 14,
-              weight: 'bold'
-            },
-            bodyFont: {
-              size: 13
-            },
+            titleFont: { size: 14, weight: 'bold' },
+            bodyFont: { size: 13 },
             callbacks: {
-              title: (context) => `Year ${context[0].label}`,
-              label: (context) => {
-                return '5 or more boys named Lubin';
-              },
-              afterLabel: () => {
-                return '(Exact count not disclosed for privacy)';
-              }
+              title: (context) => `${t('chart.belgium.tooltip.year')} ${context[0].label}`,
+              label: () => t('chart.belgium.tooltip.label'),
+              afterLabel: () => t('chart.belgium.tooltip.afterLabel')
             }
           }
         },
@@ -59,32 +53,15 @@ async function renderBelgiumChart() {
             max: 10,
             title: {
               display: true,
-              text: 'Number of Boys (5+ reported)',
-              font: {
-                size: 13,
-                weight: 'bold'
-              }
+              text: t('chart.belgium.xaxis'),
+              font: { size: 13, weight: 'bold' }
             },
-            grid: {
-              color: 'rgba(0, 0, 0, 0.05)'
-            },
-            ticks: {
-              stepSize: 1,
-              font: {
-                size: 11
-              }
-            }
+            grid: { color: 'rgba(0, 0, 0, 0.05)' },
+            ticks: { stepSize: 1, font: { size: 11 } }
           },
           y: {
-            grid: {
-              display: false
-            },
-            ticks: {
-              font: {
-                size: 12,
-                weight: 'bold'
-              }
-            }
+            grid: { display: false },
+            ticks: { font: { size: 12, weight: 'bold' } }
           }
         }
       }
@@ -94,4 +71,16 @@ async function renderBelgiumChart() {
   } catch (error) {
     console.error('Error loading Belgium chart:', error);
   }
+}
+
+function updateBelgiumChart() {
+  if (!window.chartBelgium) return;
+  const chart = window.chartBelgium;
+  chart.data.datasets[0].label = t('chart.belgium.dataset');
+  chart.options.scales.x.title.text = t('chart.belgium.xaxis');
+  chart.options.plugins.tooltip.callbacks.title =
+    (context) => `${t('chart.belgium.tooltip.year')} ${context[0].label}`;
+  chart.options.plugins.tooltip.callbacks.label = () => t('chart.belgium.tooltip.label');
+  chart.options.plugins.tooltip.callbacks.afterLabel = () => t('chart.belgium.tooltip.afterLabel');
+  chart.update();
 }
