@@ -1,0 +1,15 @@
+{
+  "name": "Lubin",
+  "years": [
+    { "year": 2013, "count": 5, "note": "5 or more boys" },
+    { "year": 2019, "count": 5, "note": "5 or more boys" },
+    { "year": 2022, "count": 5, "note": "5 or more boys" }
+  ],
+  "metadata": {
+    "source": "Statbel (Belgian Federal Statistics)",
+    "sourceNameEN": "Belgian Federal Statistics Authority",
+    "url": "https://statbel.fgov.be/en/themes/population/family-names-and-first-names/first-names-boys-and-girls",
+    "note": "Statbel reports '5+' for names with 5 or more bearers in a given year. Exact counts above 5 are not disclosed for privacy reasons.",
+    "accessed": "2026-05-14"
+  }
+}

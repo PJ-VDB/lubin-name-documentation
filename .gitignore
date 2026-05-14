@@ -1,0 +1,42 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+*.csv
+*.zip
+*.parquet
+email-to-familieretshuset-danish.md
+lubin-case-summary.md
+lubin-data-for-website.json
+
+# Raw/intermediate data and processing scripts
+scripts/
+
+# Claude Code local settings (may contain session info)
+.claude/
+
+# Keep only the processed JSON data
+!data/*.json
+!data/*.geojson

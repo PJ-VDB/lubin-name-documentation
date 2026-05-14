@@ -1,0 +1,398 @@
+[
+  {
+    "year": 1901,
+    "rank": 356,
+    "count": 10,
+    "total_names": 727
+  },
+  {
+    "year": 1905,
+    "rank": 762,
+    "count": 5,
+    "total_names": 783
+  },
+  {
+    "year": 1906,
+    "rank": 760,
+    "count": 5,
+    "total_names": 805
+  },
+  {
+    "year": 1908,
+    "rank": 821,
+    "count": 5,
+    "total_names": 835
+  },
+  {
+    "year": 1910,
+    "rank": 786,
+    "count": 5,
+    "total_names": 859
+  },
+  {
+    "year": 1911,
+    "rank": 718,
+    "count": 5,
+    "total_names": 833
+  },
+  {
+    "year": 1912,
+    "rank": 745,
+    "count": 5,
+    "total_names": 863
+  },
+  {
+    "year": 1913,
+    "rank": 802,
+    "count": 5,
+    "total_names": 871
+  },
+  {
+    "year": 1916,
+    "rank": 551,
+    "count": 5,
+    "total_names": 665
+  },
+  {
+    "year": 1918,
+    "rank": 638,
+    "count": 5,
+    "total_names": 695
+  },
+  {
+    "year": 1919,
+    "rank": 621,
+    "count": 5,
+    "total_names": 676
+  },
+  {
+    "year": 1920,
+    "rank": 832,
+    "count": 5,
+    "total_names": 836
+  },
+  {
+    "year": 1921,
+    "rank": 732,
+    "count": 5,
+    "total_names": 853
+  },
+  {
+    "year": 1922,
+    "rank": 855,
+    "count": 5,
+    "total_names": 860
+  },
+  {
+    "year": 1923,
+    "rank": 908,
+    "count": 5,
+    "total_names": 928
+  },
+  {
+    "year": 1924,
+    "rank": 833,
+    "count": 5,
+    "total_names": 1017
+  },
+  {
+    "year": 1927,
+    "rank": 1115,
+    "count": 5,
+    "total_names": 1118
+  },
+  {
+    "year": 1928,
+    "rank": 965,
+    "count": 5,
+    "total_names": 1060
+  },
+  {
+    "year": 1929,
+    "rank": 926,
+    "count": 5,
+    "total_names": 1057
+  },
+  {
+    "year": 1932,
+    "rank": 1042,
+    "count": 5,
+    "total_names": 1072
+  },
+  {
+    "year": 1933,
+    "rank": 895,
+    "count": 5,
+    "total_names": 979
+  },
+  {
+    "year": 1935,
+    "rank": 869,
+    "count": 5,
+    "total_names": 957
+  },
+  {
+    "year": 1946,
+    "rank": 937,
+    "count": 5,
+    "total_names": 1023
+  },
+  {
+    "year": 1949,
+    "rank": 1116,
+    "count": 5,
+    "total_names": 1224
+  },
+  {
+    "year": 1967,
+    "rank": 1654,
+    "count": 5,
+    "total_names": 1869
+  },
+  {
+    "year": 1969,
+    "rank": 1769,
+    "count": 5,
+    "total_names": 1969
+  },
+  {
+    "year": 1972,
+    "rank": 2054,
+    "count": 5,
+    "total_names": 2265
+  },
+  {
+    "year": 1979,
+    "rank": 2403,
+    "count": 5,
+    "total_names": 2774
+  },
+  {
+    "year": 1981,
+    "rank": 2521,
+    "count": 5,
+    "total_names": 2972
+  },
+  {
+    "year": 1986,
+    "rank": 2623,
+    "count": 5,
+    "total_names": 3104
+  },
+  {
+    "year": 1988,
+    "rank": 2510,
+    "count": 5,
+    "total_names": 3127
+  },
+  {
+    "year": 1990,
+    "rank": 2850,
+    "count": 5,
+    "total_names": 3367
+  },
+  {
+    "year": 1991,
+    "rank": 2882,
+    "count": 5,
+    "total_names": 3382
+  },
+  {
+    "year": 1992,
+    "rank": 2938,
+    "count": 5,
+    "total_names": 3468
+  },
+  {
+    "year": 1993,
+    "rank": 3007,
+    "count": 5,
+    "total_names": 3572
+  },
+  {
+    "year": 1994,
+    "rank": 1461,
+    "count": 10,
+    "total_names": 3588
+  },
+  {
+    "year": 1995,
+    "rank": 3077,
+    "count": 5,
+    "total_names": 3641
+  },
+  {
+    "year": 1996,
+    "rank": 3522,
+    "count": 5,
+    "total_names": 3767
+  },
+  {
+    "year": 1997,
+    "rank": 1549,
+    "count": 10,
+    "total_names": 3949
+  },
+  {
+    "year": 1998,
+    "rank": 3438,
+    "count": 5,
+    "total_names": 4063
+  },
+  {
+    "year": 1999,
+    "rank": 1487,
+    "count": 10,
+    "total_names": 4228
+  },
+  {
+    "year": 2000,
+    "rank": 1055,
+    "count": 20,
+    "total_names": 4446
+  },
+  {
+    "year": 2001,
+    "rank": 658,
+    "count": 50,
+    "total_names": 4565
+  },
+  {
+    "year": 2002,
+    "rank": 453,
+    "count": 95,
+    "total_names": 4793
+  },
+  {
+    "year": 2003,
+    "rank": 436,
+    "count": 105,
+    "total_names": 4966
+  },
+  {
+    "year": 2004,
+    "rank": 373,
+    "count": 140,
+    "total_names": 5224
+  },
+  {
+    "year": 2005,
+    "rank": 343,
+    "count": 170,
+    "total_names": 5463
+  },
+  {
+    "year": 2006,
+    "rank": 313,
+    "count": 210,
+    "total_names": 5702
+  },
+  {
+    "year": 2007,
+    "rank": 317,
+    "count": 195,
+    "total_names": 5775
+  },
+  {
+    "year": 2008,
+    "rank": 302,
+    "count": 215,
+    "total_names": 5925
+  },
+  {
+    "year": 2009,
+    "rank": 314,
+    "count": 205,
+    "total_names": 5963
+  },
+  {
+    "year": 2010,
+    "rank": 303,
+    "count": 230,
+    "total_names": 6377
+  },
+  {
+    "year": 2011,
+    "rank": 284,
+    "count": 240,
+    "total_names": 6601
+  },
+  {
+    "year": 2012,
+    "rank": 282,
+    "count": 245,
+    "total_names": 6823
+  },
+  {
+    "year": 2013,
+    "rank": 305,
+    "count": 220,
+    "total_names": 6867
+  },
+  {
+    "year": 2014,
+    "rank": 327,
+    "count": 205,
+    "total_names": 6957
+  },
+  {
+    "year": 2015,
+    "rank": 310,
+    "count": 205,
+    "total_names": 6920
+  },
+  {
+    "year": 2016,
+    "rank": 345,
+    "count": 175,
+    "total_names": 6922
+  },
+  {
+    "year": 2017,
+    "rank": 389,
+    "count": 150,
+    "total_names": 7018
+  },
+  {
+    "year": 2018,
+    "rank": 361,
+    "count": 155,
+    "total_names": 7067
+  },
+  {
+    "year": 2019,
+    "rank": 384,
+    "count": 150,
+    "total_names": 7017
+  },
+  {
+    "year": 2020,
+    "rank": 429,
+    "count": 120,
+    "total_names": 7032
+  },
+  {
+    "year": 2021,
+    "rank": 386,
+    "count": 140,
+    "total_names": 7081
+  },
+  {
+    "year": 2022,
+    "rank": 405,
+    "count": 135,
+    "total_names": 7264
+  },
+  {
+    "year": 2023,
+    "rank": 523,
+    "count": 90,
+    "total_names": 7047
+  },
+  {
+    "year": 2024,
+    "rank": 620,
+    "count": 70,
+    "total_names": 6859
+  }
+]
