@@ -28,7 +28,7 @@ const translations = {
     'stats.total': '<strong>Total births (1900-2024):</strong> 4,160 boys',
     'stats.peak': '<strong>Peak year:</strong> 2012 with 245 births',
     'stats.gender': '<strong>Gender:</strong> Exclusively masculine (0 girls)',
-    'stats.source': '<strong>Source:</strong> INSEE Fichier des prénoms — Édition 2024. <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a>',
+    'stats.source': '<strong>Source:</strong> INSEE Fichier des prénoms — Édition 2024. <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a> — <a href="https://www.insee.fr/fr/statistiques/3532172" target="_blank" rel="noopener">Verify with INSEE\'s interactive tool →</a>',
 
     // Ranking
     'ranking.heading': "Popularity Ranking Among French Boys' Names",
@@ -41,7 +41,7 @@ const translations = {
     'ranking.recent.2024': '<strong>2024:</strong> Ranked 620th out of 6,859 names (top 9.0%)',
     'ranking.recent.2023': '<strong>2023:</strong> Ranked 523rd out of 7,047 names (top 7.4%)',
     'ranking.recent.2022': '<strong>2022:</strong> Ranked 405th out of 7,264 names (top 5.6%)',
-    'ranking.context.p1': "From 2001 to 2022, Lubin consistently ranked in the <strong>top 300-500</strong> among all boys' names in France. During its peak years (2010-2015), it placed in the <strong>top 300-350</strong> out of over 6,000-7,000 unique names given each year.",
+    'ranking.context.p1': "From 2002 to 2022, Lubin consistently ranked in the <strong>top 300-500</strong> among all boys' names in France. During its peak years (2010-2015), it placed between <strong>rank 282 and 327</strong> out of over 6,000-7,000 unique names given each year.",
     'ranking.context.p2': "This ranking places Lubin firmly among commonly-used French boys' names, comparable to other established traditional names in everyday use across France.",
     'ranking.source': '<strong>Source:</strong> INSEE Fichier des prénoms — Édition 2024 (Parquet format with complete name rankings). <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a>',
 
@@ -151,7 +151,7 @@ const translations = {
     'stats.total': '<strong>Samlede fødsler (1900-2024):</strong> 4.160 drenge',
     'stats.peak': '<strong>Toppår:</strong> 2012 med 245 fødsler',
     'stats.gender': '<strong>Køn:</strong> Udelukkende maskulint (0 piger)',
-    'stats.source': '<strong>Kilde:</strong> INSEE Fichier des prénoms — Édition 2024. <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a>',
+    'stats.source': '<strong>Kilde:</strong> INSEE Fichier des prénoms — Édition 2024. <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a> — <a href="https://www.insee.fr/fr/statistiques/3532172" target="_blank" rel="noopener">Verificér med INSEEs interaktive værktøj →</a>',
 
     // Ranking
     'ranking.heading': 'Popularitetsrangering blandt franske drengenavne',
@@ -164,7 +164,7 @@ const translations = {
     'ranking.recent.2024': '<strong>2024:</strong> Rangeret nr. 620 ud af 6.859 navne (top 9,0%)',
     'ranking.recent.2023': '<strong>2023:</strong> Rangeret nr. 523 ud af 7.047 navne (top 7,4%)',
     'ranking.recent.2022': '<strong>2022:</strong> Rangeret nr. 405 ud af 7.264 navne (top 5,6%)',
-    'ranking.context.p1': 'Fra 2001 til 2022 rangerede Lubin konsistent i <strong>top 300-500</strong> blandt alle drengenavne i Frankrig. I toppårene (2010-2015) lå det i <strong>top 300-350</strong> ud af over 6.000-7.000 unikke navne givet hvert år.',
+    'ranking.context.p1': 'Fra 2002 til 2022 rangerede Lubin konsistent i <strong>top 300-500</strong> blandt alle drengenavne i Frankrig. I toppårene (2010-2015) lå det mellem <strong>nr. 282 og 327</strong> ud af over 6.000-7.000 unikke navne givet hvert år.',
     'ranking.context.p2': 'Denne rangering placerer Lubin solidt blandt almindeligt brugte franske drengenavne, sammenlignelig med andre etablerede traditionelle navne i daglig brug i hele Frankrig.',
     'ranking.source': '<strong>Kilde:</strong> INSEE Fichier des prénoms — Édition 2024 (Parquet-format med komplette navnerangeringer). <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a>',
 
