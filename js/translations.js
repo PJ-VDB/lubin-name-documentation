@@ -47,14 +47,14 @@ const translations = {
 
     // Geography
     'geo.heading': 'Geographic Distribution in France',
-    'geo.intro': 'The map below shows the cumulative total of boys named Lubin in each French département from 1900 to 2024. The name is used throughout France, with notable concentrations in Brittany, Normandy, and the Nord region.',
-    'geo.note': '<strong>Note:</strong> The map above shows metropolitan France only (3,821 births). The remaining 339 births (8.1% of the national total of 4,160) were registered in French overseas territories (Guadeloupe, Martinique, Réunion, etc.), by French consulates abroad, or with unspecified département codes in the INSEE data.',
+    'geo.intro': 'The map below shows the cumulative total of boys named Lubin in each French département from 1900 to 2024. The name is used throughout France, with notable concentrations in Normandy, the Nord region, Brittany, and the Loire Valley.',
+    'geo.note': '<strong>Note:</strong> The map shows births attributed to metropolitan French départements in the INSEE Fichier des prénoms (3,170 births). INSEE does not publish counts below 5 per département per year for privacy reasons, so a further 985 births from the national total of 4,160 appear in suppressed records or are unattributed in the source data.',
     'geo.top.heading': 'Top Départements by Total Births (1900-2024)',
-    'geo.dept1': '<strong>Seine-Maritime (76):</strong> 125 births — Normandy, includes Rouen and Le Havre',
-    'geo.dept2': '<strong>Nord (59):</strong> 118 births — Northern France, includes Lille',
-    'geo.dept3': '<strong>Ille-et-Vilaine (35):</strong> 102 births — Brittany, includes Rennes',
-    'geo.dept4': '<strong>Finistère (29):</strong> 95 births — Brittany, includes Brest',
-    'geo.dept5': '<strong>Morbihan (56):</strong> 88 births — Brittany, includes Vannes',
+    'geo.dept1': '<strong>Seine-Maritime (76):</strong> 200 births — Normandy, includes Rouen and Le Havre',
+    'geo.dept2': '<strong>Nord (59):</strong> 190 births — Northern France, includes Lille',
+    'geo.dept3': '<strong>Ille-et-Vilaine (35):</strong> 145 births — Brittany, includes Rennes',
+    'geo.dept4': '<strong>Maine-et-Loire (49):</strong> 140 births — Loire Valley, includes Angers',
+    'geo.dept5': '<strong>Loire-Atlantique (44):</strong> 135 births — Loire Valley, includes Nantes',
     'geo.source': '<strong>Source:</strong> INSEE Fichier des prénoms (departmental data), 2024. <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">https://www.insee.fr/fr/statistiques/8595130</a>',
 
     // Belgium
@@ -170,14 +170,14 @@ const translations = {
 
     // Geography
     'geo.heading': 'Geografisk fordeling i Frankrig',
-    'geo.intro': 'Kortet nedenfor viser det samlede antal drenge ved navn Lubin i hvert fransk département fra 1900 til 2024. Navnet bruges i hele Frankrig med særlige koncentrationer i Bretagne, Normandiet og Nord-regionen.',
-    'geo.note': '<strong>Bemærk:</strong> Kortet ovenfor viser kun det kontinentale Frankrig (3.821 fødsler). De resterende 339 fødsler (8,1% af det nationale total på 4.160) blev registreret i franske oversøiske territorier (Guadeloupe, Martinique, Réunion m.fl.), ved franske konsulater i udlandet eller med uspecificerede département-koder i INSEE-dataene.',
+    'geo.intro': 'Kortet nedenfor viser det samlede antal drenge ved navn Lubin i hvert fransk département fra 1900 til 2024. Navnet bruges i hele Frankrig med særlige koncentrationer i Normandiet, Nord-regionen, Bretagne og Loiredalen.',
+    'geo.note': '<strong>Bemærk:</strong> Kortet viser fødsler tilskrevet metropolitanske franske départementer i INSEE Fichier des prénoms (3.170 fødsler). INSEE offentliggør ikke tal under 5 pr. département pr. år af hensyn til privatlivet, så yderligere 985 fødsler fra det nationale total på 4.160 optræder i undertrykte registre eller er ikke tilskrevet i kildedataene.',
     'geo.top.heading': 'Top-départementer efter samlede fødsler (1900-2024)',
-    'geo.dept1': '<strong>Seine-Maritime (76):</strong> 125 fødsler — Normandiet, inkl. Rouen og Le Havre',
-    'geo.dept2': '<strong>Nord (59):</strong> 118 fødsler — Nordfrankrig, inkl. Lille',
-    'geo.dept3': '<strong>Ille-et-Vilaine (35):</strong> 102 fødsler — Bretagne, inkl. Rennes',
-    'geo.dept4': '<strong>Finistère (29):</strong> 95 fødsler — Bretagne, inkl. Brest',
-    'geo.dept5': '<strong>Morbihan (56):</strong> 88 fødsler — Bretagne, inkl. Vannes',
+    'geo.dept1': '<strong>Seine-Maritime (76):</strong> 200 fødsler — Normandiet, inkl. Rouen og Le Havre',
+    'geo.dept2': '<strong>Nord (59):</strong> 190 fødsler — Nordfrankrig, inkl. Lille',
+    'geo.dept3': '<strong>Ille-et-Vilaine (35):</strong> 145 fødsler — Bretagne, inkl. Rennes',
+    'geo.dept4': '<strong>Maine-et-Loire (49):</strong> 140 fødsler — Loiredalen, inkl. Angers',
+    'geo.dept5': '<strong>Loire-Atlantique (44):</strong> 135 fødsler — Loiredalen, inkl. Nantes',
     'geo.source': '<strong>Kilde:</strong> INSEE Fichier des prénoms (departmentale data), 2024. <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">https://www.insee.fr/fr/statistiques/8595130</a>',
 
     // Belgium
