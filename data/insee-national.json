@@ -513,6 +513,6 @@
     "url": "https://www.insee.fr/fr/statistiques/8595130",
     "coverage": "All births registered in France, 1900-2024",
     "accessed": "2026-05-14",
-    "note": "Data represents boys named Lubin only. The name is exclusively masculine in French civil records. Years with fewer than 5 births are not published by INSEE and appear as 0."
+    "note": "Data represents boys named Lubin only. The name is exclusively masculine in French civil records. INSEE rounds all counts to the nearest multiple of 5 (arrondis au multiple de 5 le plus proche). Names with 1–2 births in a year round to zero and do not appear; a published value of 5 represents 3–7 actual births."
   }
 }

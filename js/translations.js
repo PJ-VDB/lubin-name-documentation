@@ -8,8 +8,8 @@ const translations = {
     'nav.statistics': 'Statistics',
     'nav.ranking': 'Ranking',
     'nav.geography': 'Geography',
-    'nav.belgium': 'Belgium',
     'nav.history': 'History',
+    'nav.belgium': 'Belgium',
     'nav.sources': 'Sources',
 
     // Hero
@@ -28,7 +28,7 @@ const translations = {
     'stats.total': '<strong>Total births (1900-2024):</strong> 4,160 boys',
     'stats.peak': '<strong>Peak year:</strong> 2012 with 245 births',
     'stats.gender': '<strong>Gender:</strong> Exclusively masculine (0 girls)',
-    'stats.source': '<strong>Source:</strong> INSEE Fichier des prénoms — Édition 2024. <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a> — <a href="https://www.insee.fr/fr/statistiques/3532172" target="_blank" rel="noopener">Verify with INSEE\'s interactive tool →</a>',
+    'stats.source': '<strong>Source:</strong> INSEE Fichier des prénoms — Édition 2024. <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a> — <a href="https://www.insee.fr/fr/statistiques/3532172" target="_blank" rel="noopener">Verify with INSEE\'s interactive tool →</a> All counts are rounded to the nearest 5 by INSEE; totals are therefore approximate.',
 
     // Ranking
     'ranking.heading': "Popularity Ranking Among French Boys' Names",
@@ -48,7 +48,7 @@ const translations = {
     // Geography
     'geo.heading': 'Geographic Distribution in France',
     'geo.intro': 'The map below shows the cumulative total of boys named Lubin in each French département from 1900 to 2024. The name is used throughout France, with notable concentrations in Normandy, the Nord region, Brittany, and the Loire Valley.',
-    'geo.note': '<strong>Note:</strong> The map shows births attributed to metropolitan French départements in the INSEE Fichier des prénoms (3,170 births). INSEE does not publish counts below 5 per département per year for privacy reasons, so a further 985 births from the national total of 4,160 appear in suppressed records or are unattributed in the source data.',
+    'geo.note': '<strong>Note:</strong> The map shows births attributed to metropolitan French départements in the INSEE Fichier des prénoms (3,170 births). INSEE rounds all counts to the nearest multiple of 5; names with 1–2 births in a given year round to zero and do not appear in the data. A further 985 births from the national total of 4,160 are not attributed to any metropolitan département — these may include births registered in French overseas territories, by French consulates abroad, or with unspecified département codes in the INSEE data.',
     'geo.top.heading': 'Top Départements by Total Births (1900-2024)',
     'geo.dept1': '<strong>Seine-Maritime (76):</strong> 200 births — Normandy, includes Rouen and Le Havre',
     'geo.dept2': '<strong>Nord (59):</strong> 190 births — Northern France, includes Lille',
@@ -131,8 +131,8 @@ const translations = {
     'nav.statistics': 'Statistik',
     'nav.ranking': 'Rangordning',
     'nav.geography': 'Geografi',
-    'nav.belgium': 'Belgien',
     'nav.history': 'Historie',
+    'nav.belgium': 'Belgien',
     'nav.sources': 'Kilder',
 
     // Hero
@@ -151,7 +151,7 @@ const translations = {
     'stats.total': '<strong>Samlede fødsler (1900-2024):</strong> 4.160 drenge',
     'stats.peak': '<strong>Toppår:</strong> 2012 med 245 fødsler',
     'stats.gender': '<strong>Køn:</strong> Udelukkende maskulint (0 piger)',
-    'stats.source': '<strong>Kilde:</strong> INSEE Fichier des prénoms — Édition 2024. <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a> — <a href="https://www.insee.fr/fr/statistiques/3532172" target="_blank" rel="noopener">Verificér med INSEEs interaktive værktøj →</a>',
+    'stats.source': '<strong>Kilde:</strong> INSEE Fichier des prénoms — Édition 2024. <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a> — <a href="https://www.insee.fr/fr/statistiques/3532172" target="_blank" rel="noopener">Verificér med INSEEs interaktive værktøj →</a> Alle tal er afrundet til nærmeste 5 af INSEE; totaler er derfor omtrentlige.',
 
     // Ranking
     'ranking.heading': 'Popularitetsrangering blandt franske drengenavne',
@@ -171,7 +171,7 @@ const translations = {
     // Geography
     'geo.heading': 'Geografisk fordeling i Frankrig',
     'geo.intro': 'Kortet nedenfor viser det samlede antal drenge ved navn Lubin i hvert fransk département fra 1900 til 2024. Navnet bruges i hele Frankrig med særlige koncentrationer i Normandiet, Nord-regionen, Bretagne og Loiredalen.',
-    'geo.note': '<strong>Bemærk:</strong> Kortet viser fødsler tilskrevet metropolitanske franske départementer i INSEE Fichier des prénoms (3.170 fødsler). INSEE offentliggør ikke tal under 5 pr. département pr. år af hensyn til privatlivet, så yderligere 985 fødsler fra det nationale total på 4.160 optræder i undertrykte registre eller er ikke tilskrevet i kildedataene.',
+    'geo.note': '<strong>Bemærk:</strong> Kortet viser fødsler tilskrevet metropolitanske franske départementer i INSEE Fichier des prénoms (3.170 fødsler). INSEE afrunder alle tal til nærmeste multiplum af 5; navne med 1–2 fødsler i et givet år afrundes til nul og optræder ikke i dataene. Yderligere 985 fødsler fra det nationale total på 4.160 er ikke tilskrevet noget metropolitansk département — disse kan inkludere fødsler registreret i franske oversøiske territorier, ved franske konsulater i udlandet eller med uspecificerede département-koder i INSEE-dataene.',
     'geo.top.heading': 'Top-départementer efter samlede fødsler (1900-2024)',
     'geo.dept1': '<strong>Seine-Maritime (76):</strong> 200 fødsler — Normandiet, inkl. Rouen og Le Havre',
     'geo.dept2': '<strong>Nord (59):</strong> 190 fødsler — Nordfrankrig, inkl. Lille',

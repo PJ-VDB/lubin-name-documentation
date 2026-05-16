@@ -35,8 +35,8 @@
         <a href="#statistics" class="nav-link" data-i18n="nav.statistics">Statistics</a>
         <a href="#ranking" class="nav-link" data-i18n="nav.ranking">Ranking</a>
         <a href="#geography" class="nav-link" data-i18n="nav.geography">Geography</a>
-        <a href="#belgium" class="nav-link" data-i18n="nav.belgium">Belgium</a>
         <a href="#timeline" class="nav-link" data-i18n="nav.history">History</a>
+        <a href="#belgium" class="nav-link" data-i18n="nav.belgium">Belgium</a>
         <a href="#sources" class="nav-link" data-i18n="nav.sources">Sources</a>
       </div>
       <div class="lang-toggle">
@@ -106,6 +106,7 @@
         <strong>Source:</strong> INSEE Fichier des prénoms — Édition 2024.
         <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a> —
         <a href="https://www.insee.fr/fr/statistiques/3532172" target="_blank" rel="noopener">Verify with INSEE's interactive tool →</a>
+        All counts are rounded to the nearest 5 by INSEE; totals are therefore approximate.
       </p>
     </section>
 
@@ -168,9 +169,11 @@
       <div class="geography-summary content-narrow">
         <p style="margin-bottom: 1.5rem; padding: 1rem; background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 4px;" data-i18n-html="geo.note">
           <strong>Note:</strong> The map shows births attributed to metropolitan French départements
-          in the INSEE Fichier des prénoms (3,170 births). INSEE does not publish counts below 5
-          per département per year for privacy reasons, so a further 985 births from the national
-          total of 4,160 appear in suppressed records or are unattributed in the source data.
+          in the INSEE Fichier des prénoms (3,170 births). INSEE rounds all counts to the nearest
+          multiple of 5; names with 1–2 births in a given year round to zero and do not appear in
+          the data. A further 985 births from the national total of 4,160 are not attributed to any
+          metropolitan département — these may include births registered in French overseas territories,
+          by French consulates abroad, or with unspecified département codes in the INSEE data.
         </p>
         <h3 data-i18n="geo.top.heading">Top Départements by Total Births (1900-2024)</h3>
         <ol class="top-departements">
@@ -185,6 +188,25 @@
         <strong>Source:</strong> INSEE Fichier des prénoms (departmental data), 2024.
         <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">https://www.insee.fr/fr/statistiques/8595130</a>
       </p>
+    </section>
+
+    <!-- Historical Timeline -->
+    <section id="timeline">
+      <h2 data-i18n="timeline.heading">Historical Usage Timeline in France</h2>
+      <p class="section-intro content-narrow" data-i18n-html="timeline.intro">
+        This timeline documents two categories of evidence for the name Lubin across fourteen
+        centuries. First, notable historical figures who bore the name: a 6th-century Bishop of
+        Chartres, a 17th-century painter whose works hang in the Louvre, and a 19th-century
+        illustrator whose works are held at the Musée d'Orsay. Second, appearances of the name
+        in canonical French literature and culture: a Renaissance poem by Clément Marot, a comedy
+        by Molière performed at Versailles, a pastoral tale by Marmontel adapted into operas
+        across Europe, and the traditional folk song <em>Au clair de la lune</em> sung in
+        French schools for centuries. Together, these establish Lubin as a name with deep,
+        continuous roots in French cultural and civic life.
+      </p>
+      <div class="timeline" id="timeline-container">
+        <!-- Timeline items will be inserted here by JavaScript -->
+      </div>
     </section>
 
     <!-- Belgium Data -->
@@ -208,25 +230,6 @@
         <strong>Source:</strong> Statbel — Belgian Federal Statistics.
         <a href="https://statbel.fgov.be/en/themes/population/family-names-and-first-names/first-names-boys-and-girls" target="_blank" rel="noopener">statbel.fgov.be</a>
       </p>
-    </section>
-
-    <!-- Historical Timeline -->
-    <section id="timeline">
-      <h2 data-i18n="timeline.heading">Historical Usage Timeline in France</h2>
-      <p class="section-intro content-narrow" data-i18n-html="timeline.intro">
-        This timeline documents two categories of evidence for the name Lubin across fourteen
-        centuries. First, notable historical figures who bore the name: a 6th-century Bishop of
-        Chartres, a 17th-century painter whose works hang in the Louvre, and a 19th-century
-        illustrator whose works are held at the Musée d'Orsay. Second, appearances of the name
-        in canonical French literature and culture: a Renaissance poem by Clément Marot, a comedy
-        by Molière performed at Versailles, a pastoral tale by Marmontel adapted into operas
-        across Europe, and the traditional folk song <em>Au clair de la lune</em> sung in
-        French schools for centuries. Together, these establish Lubin as a name with deep,
-        continuous roots in French cultural and civic life.
-      </p>
-      <div class="timeline" id="timeline-container">
-        <!-- Timeline items will be inserted here by JavaScript -->
-      </div>
     </section>
 
     <!-- References -->
