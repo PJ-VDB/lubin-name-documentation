@@ -43,6 +43,7 @@ const translations = {
     'ranking.recent.2022': '<strong>2022:</strong> Ranked 405th out of 7,264 names (top 5.6%)',
     'ranking.context.p1': "From 2002 to 2022, Lubin consistently ranked in the <strong>top 300-500</strong> among all boys' names in France. During its peak years (2010-2015), it placed between <strong>rank 282 and 327</strong> out of over 6,000-7,000 unique names given each year.",
     'ranking.context.p2': "This ranking places Lubin firmly among commonly-used French boys' names, comparable to other established traditional names in everyday use across France.",
+    'ranking.verify': 'Search all 6,823 names from 2012 and verify Lubin\'s rank yourself →',
     'ranking.source': '<strong>Source:</strong> INSEE Fichier des prénoms — Édition 2024 (Parquet format with complete name rankings). <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a>',
 
     // Geography
@@ -120,6 +121,25 @@ const translations = {
     'map.tooltip.na': 'N/A',
     'map.unavailable.title': 'Map temporarily unavailable',
     'map.unavailable.body': 'Please refer to the geographic summary below for regional distribution data.',
+
+    // Rankings 2012 page
+    'rankings.back': 'Back to overview',
+    'rankings.heading': '2012 Rankings: All French Boys\' Names',
+    'rankings.intro': 'Complete list of all 6,823 boys\' names given in France in 2012, ranked by number of births. Data from INSEE\'s official birth register. Search any name to see where it placed.',
+    'rankings.chip.total': '6,823 names in 2012',
+    'rankings.chip.lubin': 'Lubin: rank #282',
+    'rankings.chip.percentile': 'Top 4.1% of all names',
+    'rankings.search.placeholder': 'Search any French name…',
+    'rankings.search.hint': 'Type a name to see where it ranked. Showing names around Lubin by default.',
+    'rankings.col.rank': 'Rank',
+    'rankings.col.name': 'Name',
+    'rankings.col.births': 'Births (2012)',
+    'rankings.status.default': 'Showing ranks {from}–{to} · Lubin highlighted at rank {rank} of {total}',
+    'rankings.status.found': '<strong>{name}</strong> · rank {rank} of {total} in 2012',
+    'rankings.status.notfound': 'No results for "{query}"',
+    'rankings.status.multi': '{count} names matching "{query}"',
+    'rankings.notfound': 'No name found.',
+    'rankings.source': '<strong>Source:</strong> INSEE Fichier des prénoms — Édition 2024 (Parquet format). <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a> All birth counts are rounded to the nearest 5 by INSEE.',
   },
 
   da: {
@@ -166,6 +186,7 @@ const translations = {
     'ranking.recent.2022': '<strong>2022:</strong> Rangeret nr. 405 ud af 7.264 navne (top 5,6%)',
     'ranking.context.p1': 'Fra 2002 til 2022 rangerede Lubin konsistent i <strong>top 300-500</strong> blandt alle drengenavne i Frankrig. I toppårene (2010-2015) lå det mellem <strong>nr. 282 og 327</strong> ud af over 6.000-7.000 unikke navne givet hvert år.',
     'ranking.context.p2': 'Denne rangering placerer Lubin solidt blandt almindeligt brugte franske drengenavne, sammenlignelig med andre etablerede traditionelle navne i daglig brug i hele Frankrig.',
+    'ranking.verify': 'Søg alle 6.823 navne fra 2012 og verificér selv Lubins rangering →',
     'ranking.source': '<strong>Kilde:</strong> INSEE Fichier des prénoms — Édition 2024 (Parquet-format med komplette navnerangeringer). <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a>',
 
     // Geography
@@ -243,5 +264,24 @@ const translations = {
     'map.tooltip.na': 'N/A',
     'map.unavailable.title': 'Kortet er midlertidigt utilgængeligt',
     'map.unavailable.body': 'Se den geografiske oversigt nedenfor for data om regional fordeling.',
+
+    // Rankings 2012 page
+    'rankings.back': 'Tilbage til oversigt',
+    'rankings.heading': 'Rangordning 2012: Alle franske drengenavne',
+    'rankings.intro': 'Komplet liste over alle 6.823 drengenavne givet i Frankrig i 2012, rangeret efter antal fødsler. Data fra INSEEs officielle fødselsregister. Søg efter et navn for at se, hvor det placerede sig.',
+    'rankings.chip.total': '6.823 navne i 2012',
+    'rankings.chip.lubin': 'Lubin: nr. 282',
+    'rankings.chip.percentile': 'Top 4,1% af alle navne',
+    'rankings.search.placeholder': 'Søg efter et fransk navn…',
+    'rankings.search.hint': 'Skriv et navn for at se dets rangering. Viser som standard navne omkring Lubin.',
+    'rankings.col.rank': 'Rangering',
+    'rankings.col.name': 'Navn',
+    'rankings.col.births': 'Fødsler (2012)',
+    'rankings.status.default': 'Viser nr. {from}–{to} · Lubin fremhævet på nr. {rank} ud af {total}',
+    'rankings.status.found': '<strong>{name}</strong> · nr. {rank} ud af {total} i 2012',
+    'rankings.status.notfound': 'Ingen resultater for "{query}"',
+    'rankings.status.multi': '{count} navne matcher "{query}"',
+    'rankings.notfound': 'Intet navn fundet.',
+    'rankings.source': '<strong>Kilde:</strong> INSEE Fichier des prénoms — Édition 2024 (Parquet-format). <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a> Alle fødselstal er afrundet til nærmeste 5 af INSEE.',
   }
 };

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2012 Rankings: All French Boys' Names — Lubin Documentation</title>
+  <meta name="description" content="Complete 2012 ranking of all 6,823 French boys' names from INSEE data. Lubin ranked #282 — top 4.1%.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.lang = localStorage.getItem('lang') || 'da';</script>
+
+  <style>
+    .page-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .back-link {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .back-link:hover { opacity: 0.65; }
+
+    .rankings-main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+    .rankings-title {
+      font-family: var(--font-sans);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid var(--navy);
+    }
+
+    .stat-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .stat-pill {
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+      border-radius: 2rem;
+      background: var(--blue-lighter);
+      color: var(--navy);
+      border: 1px solid var(--blue-light);
+    }
+    .stat-pill.highlight {
+      background: var(--navy);
+      color: white;
+      border-color: var(--navy);
+    }
+
+    .rankings-intro {
+      font-family: var(--font-serif);
+      font-size: 1.0625rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .search-input {
+      width: 100%;
+      font-family: var(--font-sans);
+      font-size: 1.0625rem;
+      padding: 0.875rem 1.25rem;
+      border: 2px solid var(--gray-200);
+      border-radius: 6px;
+      color: var(--gray-900);
+      background: var(--gray-50);
+      outline: none;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .search-input:focus {
+      border-color: var(--navy);
+      background: white;
+    }
+    .search-input::placeholder {
+      color: var(--gray-600);
+      opacity: 0.55;
+    }
+
+    .status-line {
+      margin-top: 0.625rem;
+      min-height: 1.4rem;
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      color: var(--gray-600);
+    }
+    .status-line .hl { font-weight: 700; color: var(--navy); }
+    .status-line .miss { color: var(--accent-red); }
+
+    /* Virtual-scrolled table */
+    .table-scroll-container {
+      height: 560px;
+      overflow-y: auto;
+      border: 1px solid var(--gray-200);
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+    .rankings-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      table-layout: fixed;
+    }
+    .rankings-table colgroup col.col-rank  { width: 80px; }
+    .rankings-table colgroup col.col-births { width: 130px; }
+
+    .rankings-table thead th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: var(--navy);
+      color: white;
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 0.75rem 1.25rem;
+      text-align: left;
+    }
+    .rankings-table thead th.col-rank   { text-align: center; }
+    .rankings-table thead th.col-births { text-align: right; }
+
+    .rankings-table tbody tr { height: 44px; }
+    .rankings-table tbody tr.spacer td  { padding: 0; border: none; line-height: 0; font-size: 0; }
+    .rankings-table tbody tr.row-alt    { background: var(--gray-50); }
+    .rankings-table tbody tr:hover:not(.spacer) { background: var(--blue-lighter); }
+
+    .rankings-table tbody tr.lubin-row { background: var(--blue-lighter) !important; }
+    .rankings-table tbody tr.lubin-row td:first-child { border-left: 4px solid var(--navy); }
+    .rankings-table tbody tr.lubin-row td { font-weight: 600; }
+
+    .rankings-table td {
+      padding: 0.625rem 1.25rem;
+      color: var(--gray-700);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .rankings-table td.col-rank {
+      text-align: center;
+      font-weight: 700;
+      color: var(--gray-900);
+      font-variant-numeric: tabular-nums;
+      font-size: 0.875rem;
+    }
+    .lubin-row .col-rank { color: var(--navy); }
+    .rankings-table td.col-births {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      color: var(--gray-600);
+    }
+    .lubin-row .col-births { color: var(--navy); }
+
+    .lubin-badge {
+      display: inline-block;
+      margin-left: 0.5rem;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      background: var(--navy);
+      color: white;
+      padding: 0.125rem 0.5rem;
+      border-radius: 2rem;
+      vertical-align: middle;
+    }
+
+    .table-message {
+      padding: 3rem 1rem;
+      text-align: center;
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      color: var(--gray-600);
+    }
+    .table-message.error { color: var(--accent-red); }
+
+    .source-citation {
+      margin-top: 1.75rem;
+      font-family: var(--font-serif);
+      font-size: 0.9375rem;
+      color: var(--gray-600);
+    }
+    .source-citation a { color: var(--navy); }
+
+    .rounding-note {
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      color: var(--gray-600);
+      background: var(--blue-lighter);
+      border-left: 4px solid var(--blue-medium);
+      border-radius: 4px;
+      padding: 0.6rem 1rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      .page-header    { padding: 0.75rem 1rem; }
+      .rankings-main  { padding: 2rem 1rem 4rem; }
+      .table-scroll-container { height: 420px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="index.html" class="back-link" id="back-link">← Overview</a>
+    <div class="lang-toggle">
+      <button id="lang-en" class="lang-btn" aria-label="Switch to English">EN</button>
+      <span class="lang-divider">|</span>
+      <button id="lang-da" class="lang-btn active" aria-label="Skift til dansk">DA</button>
+    </div>
+  </header>
+
+  <main class="rankings-main">
+    <h1 class="rankings-title" id="page-title"></h1>
+
+    <div class="stat-strip">
+      <span class="stat-pill" id="stat-total"></span>
+      <span class="stat-pill highlight" id="stat-lubin"></span>
+      <span class="stat-pill" id="stat-pct"></span>
+    </div>
+
+    <p class="rankings-intro" id="intro-text"></p>
+
+    <p class="rounding-note" id="rounding-note"></p>
+
+    <input type="text" id="search-input" class="search-input" autocomplete="off" spellcheck="false">
+    <div class="status-line" id="status-line"></div>
+
+    <div class="table-scroll-container" id="scroll-container">
+      <table class="rankings-table" aria-label="2012 French boys' name rankings">
+        <colgroup>
+          <col class="col-rank">
+          <col>
+          <col class="col-births">
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="col-rank"   id="th-rank"></th>
+            <th                    id="th-name"></th>
+            <th class="col-births" id="th-births"></th>
+          </tr>
+        </thead>
+        <tbody id="rankings-tbody">
+          <tr><td colspan="3" class="table-message" id="loading-msg"></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="source-citation" id="source-citation"></p>
+  </main>
+
+  <script src="data/rankings-2012.js"></script>
+  <script>
+    const ROW_HEIGHT = 44;
+    const BUFFER     = 15;
+
+    const T = {
+      en: {
+        pageTitle:   "2012 Rankings: All French Boys' Names",
+        back:        '← Overview',
+        intro:       "The complete list of all 6,823 French boys' names ranked by number of births in 2012, from official INSEE birth records. Lubin is highlighted at rank #282 — top 4.1%. Search any name to compare.",
+        placeholder: 'Search any French name…',
+        thRank:      'Rank',
+        thName:      'Name',
+        thBirths:    'Births (2012)',
+        badge:       'Lubin',
+        statusAll:   'All 6,823 names · Lubin at rank #282',
+        statusFound: (name, rank, births) =>
+          `<span class="hl">${name}</span> · ranked <strong>#${rank}</strong> of 6,823 · ${births.toLocaleString('en-GB')} births in 2012`,
+        statusMulti: count => `${count} names match — showing by rank`,
+        statusMiss:  q     => `<span class="miss">No match for "${q}" in 2012 data</span>`,
+        noResults:   'No names found.',
+        source:      '<strong>Source:</strong> INSEE Fichier des prénoms — Édition 2024. <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a>. All counts rounded to nearest 5 by INSEE.',
+        rounding:    'INSEE rounds all birth counts to the nearest 5. Where multiple names share the same rounded count, their order within this list reflects their position in the source data file. Lubin\'s exact rank may therefore vary by a few positions, but it is unambiguously among the top 300 names of the year.',
+        statTotal:   '6,823 names ranked',
+        statLubin:   'Lubin: #282',
+        statPct:     'Top 4.1%',
+        loading:     'Loading data…',
+        loadError:   'Could not load ranking data.',
+      },
+      da: {
+        pageTitle:   '2012-rangliste: Alle franske drengenavne',
+        back:        '← Oversigt',
+        intro:       'Den komplette liste over alle 6.823 franske drengenavne rangeret efter antal fødsler i 2012, fra officielle INSEE-fødselsregistre. Lubin er fremhævet på plads #282 — top 4,1 %. Søg efter et navn for at sammenligne.',
+        placeholder: 'Søg efter et fransk navn…',
+        thRank:      'Rang',
+        thName:      'Navn',
+        thBirths:    'Fødsler (2012)',
+        badge:       'Lubin',
+        statusAll:   'Alle 6.823 navne · Lubin på plads #282',
+        statusFound: (name, rank, births) =>
+          `<span class="hl">${name}</span> · rang <strong>#${rank}</strong> af 6.823 · ${births.toLocaleString('da-DK')} fødsler i 2012`,
+        statusMulti: count => `${count} navne matcher — vist efter rang`,
+        statusMiss:  q     => `<span class="miss">Ingen match for "${q}" i 2012-data</span>`,
+        noResults:   'Ingen navne fundet.',
+        source:      '<strong>Kilde:</strong> INSEE Fichier des prénoms — Édition 2024. <a href="https://www.insee.fr/fr/statistiques/8595130" target="_blank" rel="noopener">insee.fr/fr/statistiques/8595130</a>. Alle tal afrundet til nærmeste 5 af INSEE.',
+        rounding:    'INSEE afrunder alle fødselstal til nærmeste 5. Hvor flere navne deler samme afrundede tal, afspejler rækkefølgen i denne liste deres placering i kildefilen. Lubins præcise placering kan derfor variere med få pladser, men det er utvivlsomt blandt de øverste 300 navne det pågældende år.',
+        statTotal:   '6.823 navne rangeret',
+        statLubin:   'Lubin: #282',
+        statPct:     'Top 4,1 %',
+        loading:     'Indlæser data…',
+        loadError:   'Kunne ikke indlæse rangliste-data.',
+      }
+    };
+
+    let lang        = localStorage.getItem('lang') || 'da';
+    let allData     = [];
+    let visibleData = [];
+    let debounceTimer;
+    let rafPending  = false;
+
+    const $  = id  => document.getElementById(id);
+    const t  = key => T[lang][key];
+
+    function applyTranslations() {
+      document.title            = t('pageTitle') + ' — Lubin';
+      $('page-title').textContent  = t('pageTitle');
+      $('back-link').textContent   = t('back');
+      $('intro-text').textContent  = t('intro');
+      $('search-input').placeholder = t('placeholder');
+      $('stat-total').textContent  = t('statTotal');
+      $('stat-lubin').textContent  = t('statLubin');
+      $('stat-pct').textContent    = t('statPct');
+      $('source-citation').innerHTML = t('source');
+      $('rounding-note').textContent = t('rounding');
+      $('th-rank').textContent   = t('thRank');
+      $('th-name').textContent   = t('thName');
+      $('th-births').textContent = t('thBirths');
+      const lm = $('loading-msg');
+      if (lm) lm.textContent = t('loading');
+    }
+
+    function setLang(l) {
+      lang = l;
+      localStorage.setItem('lang', l);
+      document.documentElement.lang = l;
+      $('lang-en').classList.toggle('active', l === 'en');
+      $('lang-da').classList.toggle('active', l === 'da');
+      applyTranslations();
+      if (allData.length) {
+        const q = $('search-input').value.trim();
+        if (q.length >= 2) doSearch(q);
+        else { renderVirtual(); updateStatusAll(); }
+      }
+    }
+
+    function buildRow(row, idx) {
+      const isLubin = row.name === 'Lubin';
+      let cls = isLubin ? 'lubin-row' : (idx % 2 !== 0 ? 'row-alt' : '');
+      const badge  = isLubin ? ` <span class="lubin-badge">${t('badge')}</span>` : '';
+      const births = row.births.toLocaleString(lang === 'da' ? 'da-DK' : 'en-GB');
+      return `<tr${cls ? ` class="${cls}"` : ''}>
+        <td class="col-rank">${row.rank}</td>
+        <td>${row.name}${badge}</td>
+        <td class="col-births">${births}</td>
+      </tr>`;
+    }
+
+    function renderVirtual() {
+      const container = $('scroll-container');
+      const tbody     = $('rankings-tbody');
+      const data      = visibleData;
+
+      if (data.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="3" class="table-message">${t('noResults')}</td></tr>`;
+        return;
+      }
+
+      const scrollTop  = container.scrollTop;
+      const viewH      = container.clientHeight;
+      const startIdx   = Math.max(0, Math.floor(scrollTop / ROW_HEIGHT) - BUFFER);
+      const endIdx     = Math.min(data.length, Math.ceil((scrollTop + viewH) / ROW_HEIGHT) + BUFFER);
+      const topPad     = startIdx * ROW_HEIGHT;
+      const botPad     = Math.max(0, (data.length - endIdx) * ROW_HEIGHT);
+
+      tbody.innerHTML =
+        `<tr class="spacer"><td colspan="3" style="height:${topPad}px"></td></tr>` +
+        data.slice(startIdx, endIdx).map((row, i) => buildRow(row, startIdx + i)).join('') +
+        `<tr class="spacer"><td colspan="3" style="height:${botPad}px"></td></tr>`;
+    }
+
+    function scrollToLubin() {
+      const idx = visibleData.findIndex(r => r.name === 'Lubin');
+      if (idx < 0) return;
+      const container = $('scroll-container');
+      const target    = idx * ROW_HEIGHT - container.clientHeight / 2 + ROW_HEIGHT / 2;
+      container.scrollTop = Math.max(0, target);
+      renderVirtual();
+    }
+
+    function updateStatusAll() {
+      $('status-line').textContent = t('statusAll');
+    }
+
+    function showAll() {
+      visibleData = allData;
+      renderVirtual();
+      scrollToLubin();
+      updateStatusAll();
+    }
+
+    function doSearch(q) {
+      const upper = q.toUpperCase();
+      visibleData  = allData.filter(r => r.name.toUpperCase().startsWith(upper));
+      const exact  = visibleData.find(r => r.name.toUpperCase() === upper);
+      $('scroll-container').scrollTop = 0;
+      renderVirtual();
+
+      if (visibleData.length === 0) {
+        $('status-line').innerHTML = T[lang].statusMiss(q);
+      } else if (exact) {
+        $('status-line').innerHTML = T[lang].statusFound(exact.name, exact.rank, exact.births);
+      } else {
+        $('status-line').innerHTML = T[lang].statusMulti(visibleData.length);
+      }
+    }
+
+    // --- Event listeners ---
+
+    $('lang-en').addEventListener('click', () => setLang('en'));
+    $('lang-da').addEventListener('click', () => setLang('da'));
+
+    $('search-input').addEventListener('input', e => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        const q = e.target.value.trim();
+        if (q.length >= 2) doSearch(q);
+        else if (allData.length) showAll();
+      }, 200);
+    });
+
+    $('scroll-container').addEventListener('scroll', () => {
+      if (!rafPending) {
+        rafPending = true;
+        requestAnimationFrame(() => { renderVirtual(); rafPending = false; });
+      }
+    }, { passive: true });
+
+    // --- Init ---
+
+    applyTranslations();
+    setLang(lang);
+
+    if (window.rankings2012) {
+      allData = window.rankings2012;
+      $('loading-msg')?.remove();
+      showAll();
+    } else {
+      const el = $('loading-msg');
+      if (el) { el.textContent = t('loadError'); el.classList.add('error'); }
+    }
+  </script>
+</body>
+</html>
